@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from metrics import metrics
 
 # Load preprocessed data
-data_path = './datasets/preprocessed/preproc_imdb_reviews.csv'
+data_path = './datasets/preprocessed/preproc_combined_reviews.csv'
 data = pd.read_csv(data_path)
 
 # Split data into training and test sets
