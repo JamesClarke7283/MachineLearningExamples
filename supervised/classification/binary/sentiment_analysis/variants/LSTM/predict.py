@@ -3,7 +3,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load the pretrained model
-model_path = './models/sentiment_model_LSTM_7e_86acc_0.36loss.keras'
+model_path = './models/sentiment_model_LSTM_5e_85acc_0.39loss.keras'
 model = load_model(model_path)
 
 # Load the tokenizer
@@ -14,7 +14,7 @@ def encode_text(text):
     sequences = tokenizer.texts_to_sequences([text])
     return pad_sequences(sequences, maxlen=250, padding='post', truncating='post')
 
-text = "The movie was great! The characters were well-developed and the plot was thrilling.".lower()
+text = "The movie was great! But i did not like the plot twist.".lower()
 
 # Convert the text into tokenized and padded sequence
 encoded_text = encode_text(text)

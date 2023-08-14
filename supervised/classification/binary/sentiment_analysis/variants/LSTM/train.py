@@ -37,9 +37,9 @@ model = Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Train the model
-history = model.fit(data_train, label_train, epochs=7, batch_size=512, validation_split=0.2)
+history = model.fit(data_train, label_train, epochs=5, batch_size=512, validation_split=0.2)
 
-model_name = 'LSTM_7e'
+model_name = 'LSTM_5e'
 
 # Evaluate the model on the test set
 test_loss, test_accuracy = model.evaluate(data_test, label_test)
