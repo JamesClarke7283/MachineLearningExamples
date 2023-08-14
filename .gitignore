@@ -3,3 +3,9 @@
 .vscode-oss
 .vscodium
 __pycache__
+.h5
+.keras
+raw_datasets
+models
+metrics
+datasets

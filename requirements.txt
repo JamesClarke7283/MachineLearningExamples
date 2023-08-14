@@ -1,1 +1,4 @@
 tensorflow
+matplotlib
+pandas
+scikit-learn
