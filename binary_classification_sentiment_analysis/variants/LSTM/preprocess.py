@@ -5,10 +5,10 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
 
 # Define constants and paths
-INPUT_FILES = ['imdb_reviews.csv', 'yelp_reviews.csv']  # Add more filenames to this list as needed
+INPUT_FILES = ["combined_100k_reviews.csv"] #['imdb_reviews.csv', 'yelp_reviews.csv']  # Add more filenames to this list as needed
 DATASET_DIRECTORY = "./datasets/raw/"
-OUTPUT_FILE = './datasets/preprocessed/preproc_combined_reviews.csv'
-TOKENIZER_FILE = './tokenizers/sentiment_analysis/lstm_tokenizer.pickle'
+OUTPUT_FILE = './datasets/preprocessed/preproc_combined_reviews_100k.csv'
+TOKENIZER_FILE = './tokenizers/sentiment_analysis/lstm_tokenizer_100k.pickle'
 
 # Text cleaning function
 def clean_text(text):
