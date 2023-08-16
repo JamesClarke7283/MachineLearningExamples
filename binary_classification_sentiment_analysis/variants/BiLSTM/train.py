@@ -14,7 +14,7 @@ from metrics import metrics
 from tensorflow.keras.optimizers import Adam
 
 # Load preprocessed data
-data_path = './datasets/preprocessed/preproc_combined_reviews_1m.csv'
+data_path = './datasets/preprocessed/preproc_combined_reviews_2m_vocab_20k.csv'
 data = pd.read_csv(data_path)
 
 # Split data into training and test sets
@@ -26,7 +26,7 @@ data_train, data_test, label_train, label_test = train_test_split(
 )
 
 # Define constants
-VOCAB_SIZE = 10000
+VOCAB_SIZE = 20_000
 MAX_LENGTH = 250
 
 # Convert data into a format suitable for training
@@ -66,7 +66,7 @@ formatted_loss = "{:.2f}".format(test_loss)
 filename = f'{model_name}_{accuracy_percentage}acc_{formatted_loss}loss'
 
 # Save the model with the constructed filename
-model.save(f'./models/sentiment_model_{filename}_full.keras')
+model.save(f'./models/sentiment_model_{filename}_dataset_2m_vocab_20k.keras')
 
 # Visualize the metrics
 metrics(history, model_name)
